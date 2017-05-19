@@ -12,7 +12,8 @@ if [ -d ./nginx-cfg ]; then
 
     # make editable by container runner
     chgrp -R 0 "${NGINX_CONFIGURATION_PATH}"
-    chmod -R 777 "${NGINX_CONFIGURATION_PATH}"
+    chmod 774 "${NGINX_CONFIGURATION_PATH}"
+    chmod 664 "${NGINX_CONFIGURATION_PATH}/*.conf"
     
     rm -rf ./nginx-cfg
   fi
